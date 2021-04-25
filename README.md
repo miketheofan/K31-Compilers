@@ -1,6 +1,7 @@
-# K31-Compilers
-K31-Compilers, Spring 2021
+Projects for the course "K31:Compilers", 2021 by professor: [Yannis Smaragdakis](http://yanniss.github.io/)
 
+# Homework 1 - LL(1) Calculator Parser - Translator to Java
+## Part 1
 For the first part of this homework you should implement a simple calculator. The calculator should accept expressions with the addition, subtraction, and exponentiation operators, as well as parentheses. The grammar (for multi-digit numbers) is summarized in:
 
 exp -> num | exp op exp | (exp)
@@ -41,3 +42,4 @@ Note that each file of Java source code you produce must have the same name as t
 To execute the program successfully, the "Main" class of your Java program must have a method with the following signature: public static void main(String[] args), which will be the main method of your program, containing all the translated statements of the input program. Moreover, for each function declaration of the input program, the translated Java program must contain an equivalent static method of the same name. Finally, keep in mind that in the input language the function declarations must precede all statements.
 
 As with the first part of this assignment, you should accept input programs from stdin and print output Java programs to stdout.
+
