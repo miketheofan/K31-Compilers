@@ -266,7 +266,7 @@ lb2:
 lb3:
     %c = phi i32 [%a, %lb1], [%b, %lb2]
     
-## V=table
+## V-table
 
 If you do not remember or haven't seen how a virtual table (v-table) is constructed, essentially it is a table of function pointers, pointed at by the first 8 bytes of an object. The v-table defines an address for each dynamic function the object supports. Consider a function foo in position 0 and bar in position 1 of the table (with actual offset 8). If a method is overridden, the overriding version is inserted in the same location of the virtual table as the overridden version. Virtual calls are implemented by finding the address of the function to call through the virtual table. If we wanted to depict this in C, imagine that object obj is located at location x and we are calling foo which is in the 3rd position (offset 16) of the v-table. The address of the function that is going to be called is in memory location (*x) + 16.
 
